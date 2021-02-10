@@ -1,5 +1,6 @@
 const siteSetup = {
-  url: 'https://teste-nextjs-roadmap.vercel.app'
+  url: 'https://nextjs-roadmap-feedback.vercel.app',
+  email: ''
 }
 
 export default siteSetup

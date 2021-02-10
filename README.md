@@ -38,9 +38,25 @@ MONGODB_URI=CODE_HERE
 MONGODB_DB=CODE_HERE
 ```
 
+### Email Trigger
+
+The e-mail notification is performed with the integration with [SengGrid] (https://sendgrid.com/).
+You must include the SendGrid API key in the `.env` file as in the example:
+
+```
+SENDGRID_API_KEY=CODE_HERE
+```
+
+To configure the email to be notified, you need to update the `src/utils/setup.js` file in the email key. Remembering that if an e-mail is not defined in the setup, the system will not send any notification.
+
 ### API
+
 Available at
-URL/api/task
+http://localhost:3000/api/task
+
+### Other configuration
+
+In the file `src/utils/setup.js` it is possible to deny data specific to the system as the final recognized URL to access the online API.
 
 ### Deploy on Vercel
 
