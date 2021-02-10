@@ -22,6 +22,7 @@ async function connectToDatabase(uri: string) {
 
 export default async (request: NowRequest, response: NowResponse) => {
   const { id, nameFunctionality, contentFunctionality, status } = request.body
+  const modified = new Date()
 
   const db = await connectToDatabase(process.env.MONGODB_URI)
   // console.log(process.env.MONGODB_URI)
@@ -34,7 +35,8 @@ export default async (request: NowRequest, response: NowResponse) => {
     $set: {
       nameFunctionality: nameFunctionality,
       contentFunctionality: contentFunctionality,
-      status: status
+      status: status,
+      modified: modified
     }
   }
 

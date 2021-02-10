@@ -7,7 +7,7 @@ Study project aborted the Next.js framework based on React. Also using Mongodb t
 ✅ Mongodb
 ✅ API JSON
 
-## O que o sistema faz?
+## What does the system do?
 
 Creates a roadmap of functionality suggestions in phases such as backlog, in development and complete. The user can suggest a feature and it will be absorbed in the current flow. New visitors can comment independently on each suggestion.
 
@@ -39,7 +39,7 @@ MONGODB_DB=CODE_HERE
 ```
 
 ### API
-Disponivel no endereço
+Available at
 URL/api/task
 
 ### Deploy on Vercel
