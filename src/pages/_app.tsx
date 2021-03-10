@@ -1,5 +1,9 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import NextNprogress from 'nextjs-progressbar'
+
+import siteSetup from '../utils/setup'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -40,12 +44,18 @@ function App({ Component, pageProps }: AppProps) {
         <link
           rel="mask-icon"
           href="/icons/safari-pinned-tab.svg"
-          color="#27ae60"
+          color={siteSetup.colorTheme}
         />
-        <meta name="msapplication-TileColor" content="#00a300" />
+        <meta name="msapplication-TileColor" content={siteSetup.colorTheme} />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <GlobalStyles />
+      <NextNprogress
+        color={siteSetup.colorTheme}
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={4}
+      />
       <Header />
       <main>
         <Component {...pageProps} />

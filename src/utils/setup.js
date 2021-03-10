@@ -1,6 +1,7 @@
 const siteSetup = {
   url: 'https://nextjs-roadmap-feedback.vercel.app',
-  email: ''
+  email: '',
+  colorTheme: '#27ae60'
 }
 
 export default siteSetup
