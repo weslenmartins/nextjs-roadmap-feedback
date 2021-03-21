@@ -34,15 +34,11 @@ export default async (req, res) => {
     return mapTasks
   }
 
-  res.json({
-    backlog: {
-      ...filterTasks('backlog')
-    },
-    development: {
-      ...filterTasks('development')
-    },
-    complete: {
-      ...filterTasks('complete')
-    }
-  })
+  const arrTasks = [
+    ...filterTasks('backlog'),
+    ...filterTasks('development'),
+    ...filterTasks('complete')
+  ]
+
+  res.json([...arrTasks])
 }
