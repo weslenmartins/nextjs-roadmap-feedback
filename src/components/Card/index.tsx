@@ -16,7 +16,7 @@ const Card = ({ title, slug, description, rating }: CardProps) => {
     <S.CardWrapper>
       <RatingBox rating={rating} title={title} />
       <Link href={slug}>
-        <a title="{title}">
+        <a title={title}>
           <S.CardTitle>{title}</S.CardTitle>
           <S.CardDescription>
             {description.length >= 50

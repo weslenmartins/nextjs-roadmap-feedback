@@ -8,6 +8,7 @@ import CommentsItem from '../CommentsItem'
 import * as S from './styled'
 import { Comment as IconCommentSvg } from '@styled-icons/octicons/Comment'
 
+import siteSetup from '../../utils/setup'
 import axios from 'axios'
 
 const Comments = ({ name, comments }) => {
@@ -28,6 +29,10 @@ const Comments = ({ name, comments }) => {
       nameTask,
       comment
     })
+  }
+
+  if (!siteSetup.config.comments) {
+    return null
   }
 
   return (

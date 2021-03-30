@@ -47,6 +47,7 @@ export const TaskCardContent = styled.div`
   font-size: 1rem;
   font-weight: var(--font-weight-regular);
   line-height: 1.7;
+  white-space: pre-wrap;
 `
 
 export const TaskCardDate = styled.span`
